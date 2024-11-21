@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCity - Vote for Proposals</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="src/assets/images/ecocity-logo.png" type="image/svg+xml">
+
+  <!-- custom css link -->
+  <link rel="stylesheet" href="src/assets/css/style.css">
+  <link rel="stylesheet" href="src/assets/css/vote.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <ul class="header-top-list">
+          <li>
+            <a href="mailto:info@ecocity.com" class="header-top-link">
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>info@ecocity.com</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="header-top-link">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>Nairobi, Kenya</address>
+            </a>
+          </li>
+        </ul>
+
+        <div class="wrapper">
+          <ul class="header-top-social-list">
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header-top-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="src/assets/images/ecocity-logo.png" alt="EcoCity logo">
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <img src="src/assets/images/ecocity-logo.png" alt="EcoCity logo">
+            </a>
+
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="navbar-bottom">
+            <ul class="navbar-list">
+              <li>
+                <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+              </li>
+              <li>
+                <a href="proposal.html" class="navbar-link" data-nav-link>Proposals</a>
+              </li>
+              <li>
+                <a href="vote.html" class="navbar-link" data-nav-link>Vote</a>
+              </li>
+              <li>
+                <a href="dashboard.html" class="navbar-link" data-nav-link>Dashboard</a>
+              </li>
+              <li>
+                <a href="#account" class="navbar-link" data-nav-link>Account</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+         <div class="header-bottom-actions">
+          <a href="index.html" aria-label="Submit Proposal">Home</a>
+          <a href="proposal.html" aria-label="Submit Proposal">Proposal</a>
+          <a href="dashboard.html" aria-label="Submit Proposal">Dashboard</a>
+          <a href="vote.html" aria-label="Submit Proposal">Vote</a>
+          
+          <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+            <span>Menu</span>
+          </button>
+
+        </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section class="voting-section">
+      <div class="container">
+        <h2>Vote for Proposals</h2>
+        
+        <table class="proposal-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Date Submitted</th>
+              <th>Location</th>
+              <th>Action</th>
+            
+            </tr>
+          </thead>
+          <tbody id="proposal-table-body">
+            <!-- Proposals will be dynamically inserted here -->
+          </tbody>
+        </table>
+        
+        <!-- Proposal Details and Voting -->
+        <div class="proposal-details" id="proposal-details">
+          <p><strong>Proposal ID:</strong> <span id="proposal-id"></span></p>
+          <p><strong>Title:</strong> <span id="proposal-title"></span></p>
+          <p><strong>Details:</strong> <span id="proposal-description"></span></p>
+          <p><strong>Location:</strong> <span id="proposal-location"></span></p>
+         
+          
+          <h3>Do you support this proposal?</h3>
+          <div class="poll-option">
+            <label><input type="radio" name="vote" value="yes"> Yes</label>
+            <label><input type="radio" name="vote" value="no"> No</label>
+            <label><input type="radio" name="vote" value="unsure"> Not Sure</label>
+          </div>
+          <button class="btn vote-btn">Submit Vote</button>
+          <button class="btn delete-vote-btn">Delete Vote</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 EcoCity. All Rights Reserved | Designed by ChainChampions</p>
+    </div>
+  </footer>
+
+  <!-- custom js link -->
+  <script src="src/assets/js/vote.js"></script>
+
+  <!-- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
